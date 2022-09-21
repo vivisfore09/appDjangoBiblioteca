@@ -55,7 +55,7 @@ def actualizarLibro(request):
     response=requests.put('http://localhost:8000/prestamos/Libros/',data=json.dumps(datos))
     message=response.json()
     print(message)
-    return redirect('../listaLibros/', message)
+    return redirect('../listaLibros/')
 
 def eliminarLibro(request,isbn):
     response=requests.delete('http://localhost:8000/prestamos/Libros/'+isbn)
